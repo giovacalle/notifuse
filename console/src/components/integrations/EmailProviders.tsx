@@ -157,7 +157,7 @@ export const emailProviders: ProviderInfo[] = [
         className={`${size === 'small' ? 'h-3 object-contain inline-block' : 'h-6 object-contain inline-block'} ${className}`.trim()}
       />
     )
-  }
+  },
   {
     type: 'email',
     kind: 'brevo',
