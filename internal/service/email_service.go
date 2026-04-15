@@ -36,6 +36,7 @@ type EmailService struct {
 	mailgunService   domain.EmailProviderService
 	mailjetService   domain.EmailProviderService
 	sendGridService  domain.EmailProviderService
+	brevoService     domain.EmailProviderService
 }
 
 // NewEmailService creates a new EmailService instance
@@ -63,6 +64,7 @@ func NewEmailService(
 	mailgunService := NewMailgunService(httpClient, authService, logger, webhookEndpoint)
 	mailjetService := NewMailjetService(httpClient, authService, logger)
 	sendGridService := NewSendGridService(httpClient, authService, logger)
+	brevoService := NewBrevoService(httpClient, authService, logger)
 
 	return &EmailService{
 		logger:           logger,
@@ -83,6 +85,7 @@ func NewEmailService(
 		mailgunService:   mailgunService,
 		mailjetService:   mailjetService,
 		sendGridService:  sendGridService,
+		brevoService:     brevoService,
 	}
 }
 
@@ -204,6 +207,8 @@ func (s *EmailService) getProviderService(providerKind domain.EmailProviderKind)
 		return s.mailjetService, nil
 	case domain.EmailProviderKindSendGrid:
 		return s.sendGridService, nil
+	case domain.EmailProviderKindBrevo:
+		return s.brevoService, nil
 	default:
 		return nil, fmt.Errorf("unsupported provider kind: %s", providerKind)
 	}
