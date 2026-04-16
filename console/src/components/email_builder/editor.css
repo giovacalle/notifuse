@@ -38,6 +38,16 @@
     /* Dark text for form inputs */
 }
 
+.dark .tiptap-link-popover input,
+.dark .tiptap-link-popover select {
+    color: #e5e5e5 !important;
+}
+
+.dark .tiptap-link-popover .ant-btn-default,
+.dark .tiptap-emoji-popover .ant-btn-default {
+    color: var(--foreground) !important;
+}
+
 /* Paragraph spacing to match MJML compiled output */
 .email-text-preview p {
     margin: 13px 0;

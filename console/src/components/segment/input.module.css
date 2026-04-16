@@ -90,7 +90,7 @@
   top: 16px;
   height: 24px;
   line-height: 24px;
-  background-color: #fafafa;
+  background-color: var(--surface-secondary);
   border: 1px solid #CFD8DC;
   border-radius: 3px;
   font-size: 12px;
@@ -99,5 +99,22 @@
   width: 42px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+/* Dark mode overrides */
+:global(.dark) .inputGroup {
+  border-bottom-color: var(--border-secondary);
+}
+
+:global(.dark) .condition:not(:last-child) {
+  border-bottom-color: var(--border-secondary);
+}
+
+:global(.dark) .conditionSeparator {
+  border-right-color: var(--border-secondary);
+}
+
+:global(.dark) .conditionOperatorAndOr {
+  border-color: var(--border-secondary);
 }
 

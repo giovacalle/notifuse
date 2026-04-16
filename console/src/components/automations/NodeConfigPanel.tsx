@@ -138,8 +138,8 @@ export const NodeConfigPanel: React.FC<NodeConfigPanelProps> = ({
   }
 
   return (
-    <div className="bg-white h-full flex flex-col">
-      <div className="p-3 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
+    <div className="bg-surface h-full flex flex-col">
+      <div className="p-3 border-b border-border-base flex items-center justify-between flex-shrink-0">
         <Title level={5} style={{ margin: 0, fontSize: '14px' }}>
           {t`Configure`} {selectedNode.data.label}
         </Title>

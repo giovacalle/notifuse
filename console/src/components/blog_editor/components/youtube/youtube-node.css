@@ -256,3 +256,43 @@
   text-align: right !important;
 }
 
+/* Dark mode overrides */
+.dark .youtube-node-empty {
+  background-color: #1f1f1f;
+  border-color: #404040;
+}
+
+.dark .youtube-input {
+  border-color: #404040;
+  background-color: #1f1f1f;
+  color: var(--foreground);
+}
+
+.dark .youtube-input:focus {
+  background-color: #191919;
+}
+
+.dark .youtube-input::placeholder {
+  color: var(--muted);
+}
+
+.dark .youtube-hint {
+  color: var(--muted);
+}
+
+.dark .youtube-caption-input {
+  color: var(--muted);
+}
+
+.dark .youtube-caption-input input {
+  color: var(--muted) !important;
+}
+
+.dark .youtube-caption-input input::placeholder {
+  color: #555;
+}
+
+.dark .youtube-toolbar-popover .notifuse-editor-toolbar-button.ant-btn-primary:hover:not(:disabled) {
+  background-color: #262626;
+}
+

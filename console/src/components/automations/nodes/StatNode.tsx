@@ -80,7 +80,7 @@ export const StatNode: React.FC<StatNodeProps> = ({ data }) => {
         style={{ background: color, width: 8, height: 8 }}
       />
       <div
-        className="bg-white rounded shadow-sm"
+        className="bg-surface rounded shadow-sm"
         style={{
           width: '220px',
           border: `1px solid ${color}30`,
@@ -97,12 +97,12 @@ export const StatNode: React.FC<StatNodeProps> = ({ data }) => {
         </div>
 
         {/* Stats */}
-        <div className="px-3 py-2 bg-gray-50">
+        <div className="px-3 py-2 bg-background">
           <div className="flex items-center justify-between">
             <Statistic
               title={t`Inflight`}
               value={nodeStats.entered}
-              valueStyle={{ fontSize: 14, color: '#374151' }}
+              valueStyle={{ fontSize: 14, color: 'var(--foreground)' }}
             />
             <Statistic
               title={t`Completed`}
@@ -145,7 +145,7 @@ export const FilterStatNode: React.FC<StatNodeProps> = ({ data }) => {
         style={{ background: color, width: 8, height: 8 }}
       />
       <div
-        className="bg-white rounded shadow-sm"
+        className="bg-surface rounded shadow-sm"
         style={{
           width: '220px',
           border: `1px solid ${color}30`,
@@ -162,12 +162,12 @@ export const FilterStatNode: React.FC<StatNodeProps> = ({ data }) => {
         </div>
 
         {/* Stats */}
-        <div className="px-3 py-2 bg-gray-50">
+        <div className="px-3 py-2 bg-background">
           <div className="flex items-center justify-between">
             <Statistic
               title={t`Inflight`}
               value={nodeStats.entered}
-              valueStyle={{ fontSize: 14, color: '#374151' }}
+              valueStyle={{ fontSize: 14, color: 'var(--foreground)' }}
             />
             <Statistic
               title={t`Completed`}
@@ -227,7 +227,7 @@ export const ABTestStatNode: React.FC<StatNodeProps> = ({ data }) => {
         style={{ background: color, width: 8, height: 8 }}
       />
       <div
-        className="bg-white rounded shadow-sm"
+        className="bg-surface rounded shadow-sm"
         style={{
           width: '220px',
           border: `1px solid ${color}30`,
@@ -244,12 +244,12 @@ export const ABTestStatNode: React.FC<StatNodeProps> = ({ data }) => {
         </div>
 
         {/* Stats */}
-        <div className="px-3 py-2 bg-gray-50">
+        <div className="px-3 py-2 bg-background">
           <div className="flex items-center justify-between">
             <Statistic
               title={t`Inflight`}
               value={nodeStats.entered}
-              valueStyle={{ fontSize: 14, color: '#374151' }}
+              valueStyle={{ fontSize: 14, color: 'var(--foreground)' }}
             />
             <Statistic
               title={t`Completed`}
@@ -268,7 +268,7 @@ export const ABTestStatNode: React.FC<StatNodeProps> = ({ data }) => {
 
         {/* Variant labels */}
         {variants.length > 0 && (
-          <div className="px-3 py-1.5 border-t border-gray-100 flex justify-between text-xs text-gray-500">
+          <div className="px-3 py-1.5 border-t border-border-base flex justify-between text-xs text-gray-500">
             {variants.map((v) => (
               <span key={v.id} className="flex-1 text-center truncate">{v.name}</span>
             ))}

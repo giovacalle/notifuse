@@ -43,7 +43,7 @@ const MjFontSettingsPanel: React.FC<MjFontSettingsPanelProps> = ({
                 </li>
                 <li>
                   {t`Use the font name in text elements:`}{' '}
-                  <code className="bg-white px-1 rounded">font-family="Raleway, Arial"</code>
+                  <code className="bg-surface px-1 rounded">font-family="Raleway, Arial"</code>
                 </li>
                 <li>{t`Always provide fallback fonts for better compatibility`}</li>
                 <li>{t`Test in different email clients as support varies`}</li>

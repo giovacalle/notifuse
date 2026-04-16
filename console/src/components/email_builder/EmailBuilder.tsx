@@ -784,9 +784,9 @@ const EmailBuilderContent: React.FC<EmailBuilderProps> = ({
   const canRedo = state.historyIndex < state.history.length - 1
 
   return (
-    <div className="flex flex-col w-screen bg-gray-50" style={{ height: height || '100vh' }}>
+    <div className="flex flex-col w-screen bg-background" style={{ height: height || '100vh' }}>
       {/* Top Toolbar */}
-      <div className="bg-gray-50 border-b border-gray-200 px-6 py-4 flex items-center justify-between flex-shrink-0">
+      <div className="bg-background border-b border-border-base px-6 py-4 flex items-center justify-between flex-shrink-0">
         {/* Left section - Undo/Redo buttons */}
         <div className="flex items-center">
           <Space style={{ opacity: effectiveViewMode === 'edit' ? 1 : 0 }}>
@@ -853,7 +853,7 @@ const EmailBuilderContent: React.FC<EmailBuilderProps> = ({
             {/* Left Panel - Tree Component (only show in edit mode) */}
             <div
               ref={treePanelRef}
-              className="w-80 bg-gray-50 border-r border-gray-200 flex flex-col"
+              className="w-80 bg-background border-r border-border-base flex flex-col"
             >
               <OverlayScrollbarsComponent
                 defer
@@ -865,7 +865,7 @@ const EmailBuilderContent: React.FC<EmailBuilderProps> = ({
                   }
                 }}
               >
-                <div className="pt-4 px-6 text-gray-900 text-sm font-bold">Content structure</div>
+                <div className="pt-4 px-6 text-foreground text-sm font-bold">Content structure</div>
                 <TreePanel
                   emailTree={tree}
                   selectedBlockId={effectiveSelectedBlockId}
@@ -913,7 +913,7 @@ const EmailBuilderContent: React.FC<EmailBuilderProps> = ({
 
             <div
               ref={settingsPanelRef}
-              className="w-96 bg-gray-50 border-l border-gray-200 flex flex-col"
+              className="w-96 bg-background border-l border-border-base flex flex-col"
             >
               <OverlayScrollbarsComponent
                 defer

@@ -646,7 +646,7 @@ export function YoutubeNodeView(props: NodeViewProps) {
         styles={{
           body: {
             padding: '4px',
-            background: 'white',
+            background: 'var(--surface)',
             border: '1px solid #e8e8e8',
             borderRadius: '8px',
             boxShadow:

@@ -1,21 +1,58 @@
 @import "tailwindcss";
 @import "./components/email_builder/editor.css";
 @import "./styles/reactflow.css";
+
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   --color-primary: #7763f1;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-border-base: var(--border-base);
+  --color-border-secondary: var(--border-secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-popover-bg: var(--popover-bg);
+  --color-primary-bg: var(--primary-bg);
+  --color-primary-text: var(--primary-text);
+  --color-primary-light: var(--primary-light);
+  --color-primary-border-clr: var(--primary-border);
+  --color-text-secondary: var(--text-secondary);
 }
 
 :root {
-  --background: rgb(243, 246, 252);
+  --background: #F9F9F9;
   --foreground: #171717;
+  --surface: #ffffff;
+  --surface-secondary: #f5f5f5;
+  --border-base: #f0f0f0;
+  --border-secondary: #e5e5e5;
+  --muted: #8c8c8c;
+  --muted-foreground: #595959;
+  --sidebar-bg: #F9F9F9;
+  --sidebar-border: #f0f0f0;
+  --card-bg: #F9F9F9;
+  --card-border: #e8e8e8;
+  --popover-bg: #F9F9F9;
   --primary: #7763f1;
+  --primary-bg: #f3f0ff;
+  --primary-text: #7763f1;
+  --primary-light: #9b8ff5;
+  --primary-border: #d4ccf9;
+  --text-secondary: #404040;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color-scheme: light;
+  color: var(--foreground);
   background-color: var(--background);
 
   font-synthesis: none;
@@ -24,23 +61,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark {
+  --background: #141414;
+  --foreground: #e5e5e5;
+  --surface: #1f1f1f;
+  --surface-secondary: #262626;
+  --border-base: rgba(255, 255, 255, 0.08);
+  --border-secondary: rgba(255, 255, 255, 0.12);
+  --muted: #737373;
+  --muted-foreground: #a3a3a3;
+  --sidebar-bg: #141414;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --card-bg: #1f1f1f;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --popover-bg: #1f1f1f;
+  --primary: #7763f1;
+  --primary-bg: #1e1a2e;
+  --primary-text: #9b8ff5;
+  --primary-light: #b3a9f8;
+  --primary-border: #5a4fa0;
+  --text-secondary: #d4d4d4;
+
+  color-scheme: dark;
+}
+
+/* Smooth transitions when toggling theme */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--primary);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #9485f5;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-/* .drawer-no-transition .ant-drawer-content-wrapper {
-  transition: none !important;
-} */
 
 .ant-table-tbody>tr:hover>td, .tr-hover:hover>td {
   border-bottom: 1px solid rgba(78, 108, 255, 0.4) !important;
@@ -90,8 +155,33 @@ h1 {
   border-left-color: #ff4d4f !important;
 }
 
+/* Dark mode: soften Ant Design component borders that darkAlgorithm overrides */
+.dark .ant-card {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .ant-table-wrapper {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .ant-table-cell {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .ant-descriptions {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .ant-descriptions .ant-descriptions-item-label,
+.dark .ant-descriptions .ant-descriptions-item-content {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .ant-divider {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
 /* Required mark inscreses the line height of the form item creating discrepancy when using 2 columns */
 :where(.css-dev-only-do-not-override-1d0rgb4).ant-form-item .ant-form-item-label > label.ant-form-item-required::before {
   font-family: inherit;
 }
-

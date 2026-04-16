@@ -126,7 +126,7 @@ export function BroadcastStats({
       <Col span={3}>
         <Tooltip title={t`${stats.total_sent} total emails sent - Click to view details`}>
           <div
-            className="cursor-pointer hover:bg-gray-50 p-2 rounded transition-colors"
+            className="cursor-pointer hover:bg-surface-secondary p-2 rounded transition-colors"
             onClick={() => navigateToLogs('sent')}
           >
             <Statistic
@@ -159,7 +159,7 @@ export function BroadcastStats({
             className={`p-2 rounded transition-colors ${
               isSmtpProvider
                 ? 'cursor-not-allowed opacity-50'
-                : 'cursor-pointer hover:bg-gray-50'
+                : 'cursor-pointer hover:bg-surface-secondary'
             }`}
             onClick={isSmtpProvider ? undefined : () => navigateToLogs('is_delivered')}
           >
@@ -184,7 +184,7 @@ export function BroadcastStats({
       <Col span={3}>
         <Tooltip title={t`${stats.total_opened} total opens - Click to view details`}>
           <div
-            className="cursor-pointer hover:bg-gray-50 p-2 rounded transition-colors"
+            className="cursor-pointer hover:bg-surface-secondary p-2 rounded transition-colors"
             onClick={() => navigateToLogs('is_opened')}
           >
             <Statistic
@@ -208,7 +208,7 @@ export function BroadcastStats({
       <Col span={3}>
         <Tooltip title={t`${stats.total_clicked} total clicks - Click to view details`}>
           <div
-            className="cursor-pointer hover:bg-gray-50 p-2 rounded transition-colors"
+            className="cursor-pointer hover:bg-surface-secondary p-2 rounded transition-colors"
             onClick={() => navigateToLogs('is_clicked')}
           >
             <Statistic
@@ -232,7 +232,7 @@ export function BroadcastStats({
       <Col span={3}>
         <Tooltip title={t`${stats.total_failed} emails failed to send - Click to view details`}>
           <div
-            className="cursor-pointer hover:bg-gray-50 p-2 rounded transition-colors"
+            className="cursor-pointer hover:bg-surface-secondary p-2 rounded transition-colors"
             onClick={() => navigateToLogs('is_failed')}
           >
             <Statistic
@@ -265,7 +265,7 @@ export function BroadcastStats({
             className={`p-2 rounded transition-colors ${
               isSmtpProvider
                 ? 'cursor-not-allowed opacity-50'
-                : 'cursor-pointer hover:bg-gray-50'
+                : 'cursor-pointer hover:bg-surface-secondary'
             }`}
             onClick={isSmtpProvider ? undefined : () => navigateToLogs('is_bounced')}
           >
@@ -299,7 +299,7 @@ export function BroadcastStats({
             className={`p-2 rounded transition-colors ${
               isSmtpProvider
                 ? 'cursor-not-allowed opacity-50'
-                : 'cursor-pointer hover:bg-gray-50'
+                : 'cursor-pointer hover:bg-surface-secondary'
             }`}
             onClick={isSmtpProvider ? undefined : () => navigateToLogs('is_complained')}
           >
@@ -324,7 +324,7 @@ export function BroadcastStats({
       <Col span={3}>
         <Tooltip title={t`${stats.total_unsubscribed} total unsubscribes - Click to view details`}>
           <div
-            className="cursor-pointer hover:bg-gray-50 p-2 rounded transition-colors"
+            className="cursor-pointer hover:bg-surface-secondary p-2 rounded transition-colors"
             onClick={() => navigateToLogs('is_unsubscribed')}
           >
             <Statistic

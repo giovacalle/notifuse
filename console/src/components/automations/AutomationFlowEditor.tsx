@@ -387,16 +387,16 @@ const AutomationFlowEditorInner: React.FC = () => {
         maxZoom={1.5}
         defaultViewport={{ x: 50, y: 50, zoom: 1 }}
         deleteKeyCode={['Backspace', 'Delete']}
-        className="bg-gray-50"
+        className="bg-background"
         proOptions={{ hideAttribution: true }}
       >
         <Background variant={BackgroundVariant.Dots} gap={16} size={1} />
         <Controls position="top-left" showInteractive={false} />
         <Panel position="top-left" style={{ marginTop: 120 }}>
-          <div className="bg-white border border-gray-200 rounded shadow-sm">
+          <div className="bg-surface border border-border-base rounded shadow-sm">
             <Tooltip title={t`Reorganize layout`} placement="right">
               <button
-                className="flex items-center justify-center w-7 h-7 hover:bg-gray-100 cursor-pointer"
+                className="flex items-center justify-center w-7 h-7 hover:bg-surface-secondary cursor-pointer"
                 onClick={handleReorganize}
               >
                 <LayoutGrid size={16} className="text-gray-600" />
@@ -405,8 +405,8 @@ const AutomationFlowEditorInner: React.FC = () => {
           </div>
         </Panel>
         <Panel position="bottom-left">
-          <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-            <div className="text-xs text-gray-500 px-2 py-2 border-b border-gray-200">{t`Minimap`}</div>
+          <div className="bg-surface border border-border-base rounded-lg shadow-sm overflow-hidden">
+            <div className="text-xs text-gray-500 px-2 py-2 border-b border-border-base">{t`Minimap`}</div>
             <MiniMap position="top-left" bgColor="white" maskColor="transparent" style={{ position: 'relative', margin: 0 }} />
           </div>
         </Panel>
@@ -435,7 +435,7 @@ const AutomationFlowEditorInner: React.FC = () => {
       {/* Fixed Node Configuration Panel - Top Right */}
       {selectedNode && (
         <div
-          className={`absolute bg-white border border-gray-200 rounded-lg shadow-lg ${
+          className={`absolute bg-surface border border-border-base rounded-lg shadow-lg ${
             selectedNode.data.nodeType === 'filter' ? 'w-[640px]' : 'w-[480px]'
           }`}
           style={{

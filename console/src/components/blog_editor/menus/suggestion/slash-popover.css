@@ -105,3 +105,36 @@
   background: #9ca3af;
 }
 
+/* Dark mode */
+.dark .slash-popover-content {
+  background: var(--surface);
+}
+
+.dark .slash-category__header {
+  color: var(--muted);
+}
+
+.dark .slash-menu-item:hover {
+  background-color: var(--surface-secondary);
+}
+
+.dark .slash-menu-item.selected {
+  background-color: var(--border-secondary);
+}
+
+.dark .slash-menu-item__label {
+  color: var(--foreground);
+}
+
+.dark .slash-popover-content::-webkit-scrollbar-track {
+  background: var(--surface-secondary);
+}
+
+.dark .slash-popover-content::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.dark .slash-popover-content::-webkit-scrollbar-thumb:hover {
+  background: #737373;
+}
+

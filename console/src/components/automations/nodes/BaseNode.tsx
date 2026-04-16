@@ -43,7 +43,7 @@ export const BaseNode: React.FC<BaseNodeProps> = ({
             okButtonProps={{ danger: true }}
           >
             <Tooltip title={t`Delete node`} placement="right">
-              <button className="flex items-center justify-center w-6 h-6 rounded-full bg-white hover:bg-red-50 shadow-md border border-gray-200 cursor-pointer transition-transform hover:scale-110">
+              <button className="flex items-center justify-center w-6 h-6 rounded-full bg-surface hover:bg-red-50 dark:hover:bg-red-950 shadow-md border border-border-base cursor-pointer transition-transform hover:scale-110">
                 <Trash2 size={14} className="text-gray-400 hover:text-red-500" />
               </button>
             </Tooltip>
@@ -51,7 +51,7 @@ export const BaseNode: React.FC<BaseNodeProps> = ({
         </div>
       )}
       <div
-        className="automation-node bg-white rounded"
+        className="automation-node bg-surface rounded"
         style={{
           padding: '8px 12px',
           minWidth: '300px',

@@ -92,7 +92,7 @@ export function RecentThemesTable({ workspaceId, workspace }: RecentThemesTableP
           <p>
             {t`Are you sure you want to publish theme v${theme.version}? This will make it live on your blog.`}
           </p>
-          <p style={{ marginTop: 8, color: '#8c8c8c' }}>
+          <p style={{ marginTop: 8, color: 'var(--muted)' }}>
             {t`The currently published theme will be unpublished automatically.`}
           </p>
         </div>
@@ -153,7 +153,7 @@ export function RecentThemesTable({ workspaceId, workspace }: RecentThemesTableP
       key: 'notes',
       ellipsis: true,
       render: (notes: string) => {
-        if (!notes) return <span style={{ color: '#8c8c8c' }}>{t`No notes`}</span>
+        if (!notes) return <span style={{ color: 'var(--muted)' }}>{t`No notes`}</span>
         return (
           <Tooltip title={notes}>
             <span>{notes}</span>

@@ -39,7 +39,7 @@ const MjBreakpointSettingsPanel: React.FC<MjBreakpointSettingsPanelProps> = ({
         </div>
       </div>
 
-      <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-lg">
+      <div className="mt-4 p-3 bg-background border border-border-base rounded-lg">
         <div className="text-xs text-gray-600">
           <div className="font-medium mb-1">{t`How it works:`}</div>
           <ul className="space-y-1 ml-3">

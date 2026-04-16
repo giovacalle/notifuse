@@ -498,7 +498,7 @@ export const ImportExportButton: React.FC<ImportExportButtonProps> = ({
             {t`The following validation errors were found in your import:`}
           </p>
 
-          <div className="bg-red-50 border border-red-200 rounded-md p-3 max-h-60 overflow-y-auto">
+          <div className="bg-red-50 dark:bg-red-950 border border-red-200 rounded-md p-3 max-h-60 overflow-y-auto">
             <ul className="space-y-2">
               {validationErrors.map((error, index) => (
                 <li key={index} className="flex items-start gap-2">

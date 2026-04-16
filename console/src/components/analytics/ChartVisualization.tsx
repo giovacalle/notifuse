@@ -392,7 +392,7 @@ export const ChartVisualization: React.FC<ChartVisualizationProps> = ({
 
   if (!data || !data.data.length) {
     return (
-      <div style={{ textAlign: 'center', padding: '50px', color: '#999' }}>{t`No data available`}</div>
+      <div style={{ textAlign: 'center', padding: '50px', color: 'var(--muted-foreground)' }}>{t`No data available`}</div>
     )
   }
 

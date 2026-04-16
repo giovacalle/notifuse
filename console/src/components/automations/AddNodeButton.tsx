@@ -97,7 +97,7 @@ export const AddNodeButton: React.FC<AddNodeButtonProps> = ({
             className={`w-full px-3 py-2 text-left text-sm flex items-center gap-2 ${
               isDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100 cursor-pointer'
             }`}
-            style={{ color: '#374151' }}
+            style={{ color: 'var(--foreground)' }}
             onClick={() => {
               if (isDisabled) return
               onSelectNodeType(item.key)

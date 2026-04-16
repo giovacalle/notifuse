@@ -71,7 +71,7 @@ export function LogoInput({
                   border: '1px solid #d9d9d9',
                   borderRight: 0,
                   borderRadius: '6px 0 0 6px',
-                  background: '#fafafa'
+                  background: 'var(--surface-secondary)'
                 }}
               >
                 <Image src={logoUrl} alt={t`Logo Preview`} height={24} preview={false} />

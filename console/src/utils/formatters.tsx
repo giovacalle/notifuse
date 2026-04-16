@@ -9,7 +9,7 @@ import dayjs from '../lib/dayjs'
  */
 export const formatValue = (value: unknown, timezone?: string): React.ReactNode => {
   if (value === null || value === undefined) {
-    return <span style={{ fontStyle: 'italic', color: '#999' }}>null</span>
+    return <span style={{ fontStyle: 'italic', color: 'var(--muted)' }}>null</span>
   }
 
   // Handle boolean values as tags

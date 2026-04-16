@@ -268,10 +268,10 @@ export default function SetupWizard() {
   if (statusLoading) {
     return (
       <App>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="min-h-screen bg-background flex items-center justify-center">
           <div className="text-center">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900" />
-            <p className="mt-4 text-gray-600">{t`Loading setup...`}</p>
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-current" />
+            <p className="mt-4 text-muted-foreground">{t`Loading setup...`}</p>
           </div>
         </div>
       </App>
@@ -280,22 +280,22 @@ export default function SetupWizard() {
 
   return (
     <App>
-      <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-background flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-3xl">
           {/* Logo */}
           <div className="text-center mb-8">
             <img src="/console/logo.png" alt="Notifuse" className="mx-auto" width={120} />
           </div>
 
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <div className="bg-surface py-8 px-4 shadow sm:rounded-lg sm:px-10">
             {setupComplete ? (
               <div className="space-y-6">
                 <div className="text-center">
                   <CheckOutlined
                     style={{ fontSize: '48px', color: '#52c41a', marginBottom: '16px' }}
                   />
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">{t`Setup Complete!`}</h2>
-                  <p className="text-gray-600">
+                  <h2 className="text-3xl font-bold mb-2">{t`Setup Complete!`}</h2>
+                  <p className="text-muted-foreground">
                     {t`Your Notifuse instance has been successfully configured.`}
                   </p>
                 </div>
@@ -318,7 +318,7 @@ export default function SetupWizard() {
             ) : (
               <div className="space-y-6">
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold text-gray-900">{t`Setup`}</h2>
+                  <h2 className="text-3xl font-bold">{t`Setup`}</h2>
                 </div>
 
                 <Form
@@ -384,7 +384,7 @@ export default function SetupWizard() {
                       </Divider>
 
                       <div className="text-center mb-4">
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           {t`See docs for:`}
                           <a
                             href="https://docs.aws.amazon.com/ses/latest/dg/smtp-credentials.html"
@@ -574,7 +574,7 @@ export default function SetupWizard() {
                                         style={{
                                           marginTop: 16,
                                           paddingLeft: 24,
-                                          borderLeft: '3px solid #1890ff'
+                                          borderLeft: '3px solid var(--border-base)'
                                         }}
                                       >
                                         <Form.Item

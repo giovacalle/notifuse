@@ -141,13 +141,13 @@ export function InlineEditableField({
   // Format display value
   const formatDisplayValue = () => {
     if (value === null || value === undefined || value === '') {
-      return <span className="text-gray-400 italic">{t`Not set`}</span>
+      return <span className="text-muted italic">{t`Not set`}</span>
     }
 
     if (fieldType === 'json') {
       try {
         return (
-          <pre className="text-xs bg-gray-100 p-1 rounded m-0 max-h-20 overflow-auto">
+          <pre className="text-xs bg-surface-secondary p-1 rounded m-0 max-h-20 overflow-auto">
             {JSON.stringify(value, null, 2)}
           </pre>
         )
@@ -282,8 +282,8 @@ export function InlineEditableField({
   // Edit mode
   if (isEditing) {
     return (
-      <div className="py-2 px-4 bg-blue-50 border-b border-dashed border-gray-300">
-        <div className="text-xs font-semibold text-slate-600 mb-2">{labelToDisplay}</div>
+      <div className="py-2 px-4 bg-blue-50 dark:bg-blue-950 border-b border-dashed border-border-base">
+        <div className="text-xs font-semibold text-muted-foreground mb-2">{labelToDisplay}</div>
         <div className="mb-2">{renderInput()}</div>
         <div className="flex justify-end">
           <Space size="small">
@@ -326,25 +326,25 @@ export function InlineEditableField({
   // Display mode with hover edit icon
   return (
     <div
-      className="py-2 px-4 grid grid-cols-[1fr_auto] text-xs gap-1 border-b border-dashed border-gray-300 hover:bg-gray-100 group cursor-pointer"
+      className="py-2 px-4 grid grid-cols-[1fr_auto] text-xs gap-1 border-b border-dashed border-border-base hover:bg-surface-secondary group cursor-pointer"
       onClick={disabled ? undefined : handleStartEdit}
     >
       <div className="grid grid-cols-2 gap-1">
         {showTooltip ? (
-          <span className="font-semibold text-slate-600" title={technicalName}>
+          <span className="font-semibold text-muted-foreground" title={technicalName}>
             {labelToDisplay}
           </span>
         ) : (
-          <span className="font-semibold text-slate-600">{labelToDisplay}</span>
+          <span className="font-semibold text-muted-foreground">{labelToDisplay}</span>
         )}
         <span>{formatDisplayValue()}</span>
       </div>
       {!disabled && (
         <div className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
           {isLoading ? (
-            <span className="text-gray-400">...</span>
+            <span className="text-muted">...</span>
           ) : (
-            <EditOutlined className="text-gray-400 hover:text-blue-500" />
+            <EditOutlined className="text-muted hover:text-blue-500" />
           )}
         </div>
       )}

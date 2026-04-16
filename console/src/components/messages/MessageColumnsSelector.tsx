@@ -52,7 +52,7 @@ export function MessageColumnsSelector({
         ))}
       </div>
       {rightColumns.length > 0 && (
-        <div className="min-w-[200px] border-l border-gray-200 pl-4">
+        <div className="min-w-[200px] border-l border-border-base pl-4">
           {rightColumns.map((column) => (
             <div key={column.key} className="py-1">
               <Checkbox

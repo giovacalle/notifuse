@@ -142,7 +142,7 @@ export function AcceptInvitationPage() {
           </div>
 
           <div
-            style={{ marginBottom: 24, padding: 16, backgroundColor: '#f5f5f5', borderRadius: 8 }}
+            style={{ marginBottom: 24, padding: 16, backgroundColor: 'var(--surface-secondary)', borderRadius: 8 }}
           >
             <div style={{ marginBottom: 8 }}>
               <Text strong>{t`Workspace:`}</Text> {invitationData.workspace.name}

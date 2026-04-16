@@ -28,13 +28,13 @@ export function JsonViewer({ json, title }: JsonViewerProps) {
       content={
         <div>
           {title && <div className="font-medium mb-2">{title}</div>}
-          <pre className="max-h-[300px] overflow-auto text-sm bg-gray-50 p-2 rounded">
+          <pre className="max-h-[300px] overflow-auto text-sm bg-background p-2 rounded">
             {JSON.stringify(json, null, 2)}
           </pre>
         </div>
       }
     >
-      <span className="text-gray-600 cursor-pointer">{preview}</span>
+      <span className="text-muted-foreground cursor-pointer">{preview}</span>
     </Popover>
   )
 }
@@ -85,7 +85,7 @@ export function ContactColumnsSelector({
           )
         })}
       </div>
-      <div className="min-w-[200px] border-l border-gray-200 pl-4">
+      <div className="min-w-[200px] border-l border-border-base pl-4">
         {rightColumns.map((column) => {
           const showTooltip = column.key !== 'lists' && column.key !== 'segments'
 

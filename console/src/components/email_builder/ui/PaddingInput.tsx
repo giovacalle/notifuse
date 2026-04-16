@@ -154,7 +154,7 @@ const PaddingInput: React.FC<PaddingInputProps> = memo((props) => {
     <div>
       <Row gutter={16}>
         <Col span={5}>
-          <span className="text-xs text-gray-500">{t`Top`}</span>
+          <span className="text-xs text-muted-foreground">{t`Top`}</span>
         </Col>
         <Col span={7}>
           <InputNumber
@@ -166,7 +166,7 @@ const PaddingInput: React.FC<PaddingInputProps> = memo((props) => {
           />
         </Col>
         <Col span={5}>
-          <span className="text-xs text-gray-500">{t`Right`}</span>
+          <span className="text-xs text-muted-foreground">{t`Right`}</span>
         </Col>
         <Col span={7}>
           <InputNumber
@@ -181,7 +181,7 @@ const PaddingInput: React.FC<PaddingInputProps> = memo((props) => {
 
       <Row gutter={16} className="mt-4">
         <Col span={5}>
-          <span className="text-xs text-gray-500">{t`Bottom`}</span>
+          <span className="text-xs text-muted-foreground">{t`Bottom`}</span>
         </Col>
         <Col span={7}>
           <InputNumber
@@ -193,7 +193,7 @@ const PaddingInput: React.FC<PaddingInputProps> = memo((props) => {
           />
         </Col>
         <Col span={5}>
-          <span className="text-xs text-gray-500">{t`Left`}</span>
+          <span className="text-xs text-muted-foreground">{t`Left`}</span>
         </Col>
         <Col span={7}>
           <InputNumber

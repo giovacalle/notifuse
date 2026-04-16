@@ -42,7 +42,7 @@ export function OptionSelector<T = string>({
               ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
               ${isSelected
                 ? 'border-primary bg-primary/5'
-                : 'border-gray-200 hover:border-gray-300'
+                : 'border-border-base hover:border-border-secondary'
               }
             `}
           >

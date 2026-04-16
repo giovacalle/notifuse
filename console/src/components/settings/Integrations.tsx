@@ -1020,7 +1020,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
           <div
             key={`${provider.type}-${provider.kind}`}
             onClick={() => handleSelectProviderType(provider.kind)}
-            className="flex justify-between items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-all cursor-pointer mb-4 relative"
+            className="flex justify-between items-center p-4 border border-border-base rounded-lg hover:border-border-secondary transition-all cursor-pointer mb-4 relative"
           >
             <div className="flex items-center">
               {provider.getIcon('', 'large')}
@@ -1044,7 +1044,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
         <div
           key="supabase"
           onClick={() => handleSelectSupabase()}
-          className="flex justify-between items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-all cursor-pointer mb-4 relative"
+          className="flex justify-between items-center p-4 border border-border-base rounded-lg hover:border-border-secondary transition-all cursor-pointer mb-4 relative"
         >
           <div className="flex items-center">
             <img src="/console/supabase.png" alt="Supabase" style={{ height: 13 }} />
@@ -1068,7 +1068,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
           <div
             key={`${provider.type}-${provider.kind}`}
             onClick={() => handleSelectLLMProvider(provider.kind)}
-            className="flex justify-between items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-all cursor-pointer mb-4 relative"
+            className="flex justify-between items-center p-4 border border-border-base rounded-lg hover:border-border-secondary transition-all cursor-pointer mb-4 relative"
           >
             <div className="flex items-center">
               {provider.getIcon('', 'large')}
@@ -1091,7 +1091,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
         {/* Firecrawl */}
         <div
           onClick={() => handleSelectFirecrawl()}
-          className="flex justify-between items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-all cursor-pointer mb-4 relative"
+          className="flex justify-between items-center p-4 border border-border-base rounded-lg hover:border-border-secondary transition-all cursor-pointer mb-4 relative"
         >
           <div className="flex items-center">
             {firecrawlProvider.getIcon('', 'large')}
@@ -1212,7 +1212,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
                           <Tag bordered={false} color="green" className="mb-2">
                             <FontAwesomeIcon icon={faCheck} className="mr-1" /> {t`Configured`}
                           </Tag>
-                          <div className="mt-2 text-xs text-gray-500">{t`Webhook endpoint:`}</div>
+                          <div className="mt-2 text-xs text-muted-foreground">{t`Webhook endpoint:`}</div>
 
                           <Input
                             value={authEmailWebhookURL}
@@ -1249,7 +1249,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
                           <Tag bordered={false} color="green" className="mb-2">
                             <FontAwesomeIcon icon={faCheck} className="mr-1" /> {t`Configured`}
                           </Tag>
-                          <div className="mt-2 text-xs text-gray-500">{t`Webhook endpoint:`}</div>
+                          <div className="mt-2 text-xs text-muted-foreground">{t`Webhook endpoint:`}</div>
 
                           <Input
                             value={beforeUserCreatedWebhookURL}
@@ -1848,7 +1848,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
         </Form.Item>
 
         {(rateLimitPerMinute || 25) > 0 && (
-          <div className="text-xs text-gray-600 -mt-4 mb-4">
+          <div className="text-xs text-muted-foreground -mt-4 mb-4">
             <div>≈ {((rateLimitPerMinute || 25) * 60).toLocaleString()} {t`emails per hour`}</div>
             <div>≈ {((rateLimitPerMinute || 25) * 60 * 24).toLocaleString()} {t`emails per day`}</div>
           </div>
@@ -1930,7 +1930,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
         tooltip={t`Add one or more email senders. The first sender will be used as the default.`}
       >
         {senders.length > 0 ? (
-          <div className="border border-gray-200 rounded-md p-4 mb-4">
+          <div className="border border-border-base rounded-md p-4 mb-4">
             <Table
               dataSource={senders}
               columns={columns}
@@ -2027,7 +2027,7 @@ export function Integrations({ workspace, onSave, loading, isOwner }: Integratio
     items.push(
       <Descriptions.Item key="rate_limit" label={t`Rate Limit for Marketing`}>
         <div>{provider.rate_limit_per_minute} emails/min</div>
-        <div className="text-xs text-gray-600 mt-1">
+        <div className="text-xs text-muted-foreground mt-1">
           <div>≈ {(provider.rate_limit_per_minute * 60).toLocaleString()} {t`emails per hour`}</div>
           <div>≈ {(provider.rate_limit_per_minute * 60 * 24).toLocaleString()} {t`emails per day`}</div>
         </div>

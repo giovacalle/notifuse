@@ -194,7 +194,7 @@ const TemplateTranslationsTab: React.FC<TemplateTranslationsTabProps> = ({
             <Card
               key={lang}
               title={`${langName} (${lang})`}
-              style={{ backgroundColor: '#fff', width: 900 }}
+              style={{ backgroundColor: 'var(--surface)', width: 900 }}
               bodyStyle={enabled && langState ? undefined : { display: 'none' }}
               extra={
                 <Switch

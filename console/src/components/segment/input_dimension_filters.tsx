@@ -24,8 +24,8 @@ const typeIcon = {
   lineHeight: '18px',
   borderRadius: '3px',
   verticalAlign: 'text-top',
-  backgroundColor: '#eee',
-  color: '#666'
+  backgroundColor: 'var(--surface-secondary)',
+  color: 'var(--muted-foreground)'
 }
 
 const fieldTypeRendererDictionary: FieldTypeRendererDictionary = {

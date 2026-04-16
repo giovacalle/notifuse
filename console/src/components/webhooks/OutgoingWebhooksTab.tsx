@@ -465,7 +465,7 @@ export function OutgoingWebhooksTab({ workspaceId }: OutgoingWebhooksTabProps) {
             rowKey="id"
             pagination={false}
             size="middle"
-            className="border border-gray-300 rounded"
+            className="border border-border-secondary rounded"
             expandable={{
               expandedRowRender: (record) => (
                 <div className="px-4 py-2">
@@ -484,14 +484,14 @@ export function OutgoingWebhooksTab({ workspaceId }: OutgoingWebhooksTabProps) {
                   {record.last_response_body && (
                     <div className="text-xs mb-2">
                       <strong>{t`Response Body:`}</strong>
-                      <pre className="mt-1 p-2 bg-gray-100 rounded text-xs overflow-auto max-h-40">
+                      <pre className="mt-1 p-2 bg-surface-secondary rounded text-xs overflow-auto max-h-40">
                         {record.last_response_body}
                       </pre>
                     </div>
                   )}
                   <div className="text-xs mb-2">
                     <strong>{t`Payload:`}</strong>
-                    <pre className="mt-1 p-2 bg-gray-100 rounded text-xs overflow-auto max-h-40">
+                    <pre className="mt-1 p-2 bg-surface-secondary rounded text-xs overflow-auto max-h-40">
                       {JSON.stringify(record.payload, null, 2)}
                     </pre>
                   </div>

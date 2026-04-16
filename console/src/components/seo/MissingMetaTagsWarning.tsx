@@ -80,7 +80,7 @@ export function MissingMetaTagsWarning({ seo, className }: MissingMetaTagsWarnin
           <List.Item style={{ padding: '4px 0', border: 'none' }}>
             <div>
               <div style={{ fontWeight: 500, fontSize: 12 }}>{item.name}</div>
-              <div style={{ fontSize: 11, color: '#666', marginTop: 2 }}>{item.description}</div>
+              <div style={{ fontSize: 11, color: 'var(--muted-foreground)', marginTop: 2 }}>{item.description}</div>
             </div>
           </List.Item>
         )}

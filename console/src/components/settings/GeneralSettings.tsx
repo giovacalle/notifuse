@@ -101,6 +101,7 @@ export function GeneralSettings({ workspace, onWorkspaceUpdate, isOwner }: Gener
           description={t`General settings for your workspace`}
         />
 
+
         <Descriptions
           bordered
           column={1}
@@ -252,7 +253,7 @@ export function GeneralSettings({ workspace, onWorkspaceUpdate, isOwner }: Gener
                   marginTop: 8,
                   fontFamily: 'monospace',
                   fontSize: '12px',
-                  background: '#f5f5f5',
+                  background: 'var(--surface-secondary)',
                   padding: '4px 8px',
                   borderRadius: '4px'
                 }}

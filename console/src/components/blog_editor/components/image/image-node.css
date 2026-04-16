@@ -246,3 +246,39 @@
   text-align: right !important;
 }
 
+/* Dark mode overrides */
+.dark .image-node-empty {
+  background-color: #1f1f1f;
+  border-color: #404040;
+}
+
+.dark .image-input {
+  border-color: #404040;
+  background-color: #1f1f1f;
+  color: var(--foreground);
+}
+
+.dark .image-input:focus {
+  background-color: #191919;
+}
+
+.dark .image-input::placeholder {
+  color: var(--muted);
+}
+
+.dark .image-hint {
+  color: var(--muted);
+}
+
+.dark .image-container {
+  background-color: #191919;
+}
+
+.dark .image-toolbar-popover .notifuse-editor-toolbar-button.ant-btn-primary:hover:not(:disabled) {
+  background-color: #262626;
+}
+
+.dark .image-caption-input input::placeholder {
+  color: var(--muted);
+}
+

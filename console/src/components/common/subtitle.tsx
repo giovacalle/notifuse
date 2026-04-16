@@ -18,7 +18,7 @@ const Subtitle = ({
   const text = isPrimary ? 'text-primary' : ''
   let border = ''
   if (borderBottom) {
-    border = isPrimary ? 'border-b border-primary-300 pb-2' : 'border-b border-gray-300 pb-2'
+    border = isPrimary ? 'border-b border-primary-300 pb-2' : 'border-b border-border-secondary pb-2'
   }
 
   return <div className={`${base} ${className ?? ''} ${border} ${text}`}>{children}</div>

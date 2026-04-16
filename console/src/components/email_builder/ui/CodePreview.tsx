@@ -35,14 +35,14 @@ const CodePreview: React.FC<CodePreviewProps> = ({
 
   if (!code.trim()) {
     return (
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center text-gray-500 text-sm">
+      <div className="bg-background border border-border-base rounded-lg p-4 text-center text-gray-500 text-sm">
         {t`No ${language.toUpperCase()} content to preview`}
       </div>
     )
   }
 
   return (
-    <div className="relative bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+    <div className="relative bg-background border border-border-base rounded-lg overflow-hidden">
       {showExpandButton && (
         <Button
           type="primary"
@@ -90,7 +90,7 @@ const CodePreview: React.FC<CodePreviewProps> = ({
       </div>
 
       {!isExpanded && code.split('\n').length * 20 > maxHeight && (
-        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-50 dark:from-[#191919] to-transparent pointer-events-none" />
       )}
     </div>
   )

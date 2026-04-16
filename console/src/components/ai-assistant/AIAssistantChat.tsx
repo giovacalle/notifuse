@@ -56,7 +56,7 @@ export function AIAssistantChat({
               bottom: 24,
               right: 24,
               width: 360,
-              backgroundColor: '#fff',
+              backgroundColor: 'var(--surface)',
               borderRadius: 12,
               boxShadow: '0 6px 24px rgba(0,0,0,0.15)',
               zIndex: 1000,
@@ -69,8 +69,8 @@ export function AIAssistantChat({
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 padding: '12px 16px',
-                borderBottom: '1px solid #f0f0f0',
-                backgroundColor: '#fafafa'
+                borderBottom: '1px solid var(--border-base)',
+                backgroundColor: 'var(--surface-secondary)'
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -100,7 +100,7 @@ export function AIAssistantChat({
                 <span style={{ color: '#fff' }}>{config.iconLarge}</span>
               </div>
               <h3 style={{ margin: '0 0 8px', fontSize: 16 }}>{t`AI Assistant Not Configured`}</h3>
-              <p style={{ margin: '0 0 16px', color: '#666', fontSize: 14, lineHeight: 1.5 }}>
+              <p style={{ margin: '0 0 16px', color: 'var(--muted-foreground)', fontSize: 14, lineHeight: 1.5 }}>
                 {t`To use the ${config.title}, you need to configure the Anthropic integration in your workspace settings.`}
               </p>
               <Button
@@ -151,7 +151,7 @@ export function AIAssistantChat({
             bottom: 24,
             right: 24,
             width: 420,
-            backgroundColor: '#fff',
+            backgroundColor: 'var(--surface)',
             borderRadius: 12,
             boxShadow: '0 6px 24px rgba(0,0,0,0.15)',
             zIndex: 1000,
@@ -167,8 +167,8 @@ export function AIAssistantChat({
               alignItems: 'center',
               justifyContent: 'space-between',
               padding: '12px 16px',
-              borderBottom: '1px solid #f0f0f0',
-              backgroundColor: '#fafafa'
+              borderBottom: '1px solid var(--border-base)',
+              backgroundColor: 'var(--surface-secondary)'
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

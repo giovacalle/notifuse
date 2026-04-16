@@ -162,3 +162,33 @@
   z-index: 1000;
 }
 
+/* Dark mode */
+.dark .notifuse-editor-floating-toolbar {
+  background: var(--surface);
+  border-color: var(--border-secondary);
+}
+
+.dark .notifuse-editor-toolbar-button:hover:not(:disabled) {
+  background-color: var(--surface-secondary);
+}
+
+.dark .notifuse-editor-toolbar-button:active:not(:disabled) {
+  background-color: var(--border-secondary);
+}
+
+.dark .notifuse-editor-toolbar-turn-into:hover:not(:disabled) {
+  background-color: var(--surface-secondary);
+}
+
+.dark .notifuse-editor-toolbar-button-active:hover:not(:disabled) {
+  background-color: var(--surface-secondary);
+}
+
+.dark .notifuse-editor-floating-toolbar::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.dark .notifuse-editor-floating-toolbar::-webkit-scrollbar-thumb:hover {
+  background: #737373;
+}
+

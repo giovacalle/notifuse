@@ -64,7 +64,7 @@ export function DashboardPage() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      background: workspace.settings.logo_url ? '#f5f5f5' : '#e6f7ff',
+                      background: workspace.settings.logo_url ? 'var(--surface-secondary)' : 'var(--surface-secondary)',
                       borderRadius: '4px',
                       overflow: 'hidden'
                     }}

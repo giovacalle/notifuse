@@ -106,7 +106,7 @@ export function ListStats({ workspaceId, listId }: ListStatsProps) {
               className="text-inherit hover:text-primary transition-colors"
             >
               <Space>
-                <FontAwesomeIcon icon={faBan} className="text-gray-500" style={{ opacity: 0.7 }} />{' '}
+                <FontAwesomeIcon icon={faBan} className="text-muted-foreground" style={{ opacity: 0.7 }} />{' '}
                 {t`Unsub`}
               </Space>
             </Link>

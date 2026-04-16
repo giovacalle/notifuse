@@ -43,7 +43,7 @@ interface MainLayoutSidebarProps {
 
 export function MainLayoutSidebar({ children, title, extra }: MainLayoutSidebarProps) {
   return (
-    <div className="fixed right-0 top-0 bottom-0 w-[400px] p-6 backdrop-blur-lg bg-white/90 border-l border-black/[0.06] overflow-y-auto">
+    <div className="fixed right-0 top-0 bottom-0 w-[400px] p-6 backdrop-blur-lg bg-white/90 dark:bg-black/80 border-l border-black/[0.06] dark:border-white/[0.06] overflow-y-auto">
       <div
         style={{
           display: 'flex',

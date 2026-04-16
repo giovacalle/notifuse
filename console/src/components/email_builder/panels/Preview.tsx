@@ -175,8 +175,8 @@ export const Preview = forwardRef<PreviewRef, PreviewProps>(
         return (
           <div className="h-full flex flex-col">
             {/* Editor Header */}
-            <div className="flex items-center justify-between p-3 border-b border-gray-200 bg-gray-50">
-              <span className="text-sm font-medium text-gray-700">{t`Edit Test Data (JSON)`}</span>
+            <div className="flex items-center justify-between p-3 border-b border-border-base bg-background">
+              <span className="text-sm font-medium text-foreground">{t`Edit Test Data (JSON)`}</span>
               <div className="flex gap-2">
                 <Button size="small" onClick={handleCancelEdit}>
                   {t`Cancel`}
@@ -399,7 +399,7 @@ export const Preview = forwardRef<PreviewRef, PreviewProps>(
         >
           <Splitter.Panel size={leftPanelSize} min={300} max="70%">
             {/* Left Panel - Tabs */}
-            <div className="bg-gray-50 border-r border-gray-200 flex flex-col h-full">
+            <div className="bg-background border-r border-border-base flex flex-col h-full">
               <Tabs
                 activeKey={activeTab}
                 onChange={setActiveTab}

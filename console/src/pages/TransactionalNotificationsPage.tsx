@@ -50,7 +50,7 @@ const getIntegrationIcon = (integrationType: string) => {
     case 'supabase':
       return <img src="/console/supabase.png" alt="Supabase" className="h-3" />
     default:
-      return <FontAwesomeIcon icon={faTerminal} className="text-gray-600" />
+      return <FontAwesomeIcon icon={faTerminal} className="text-muted-foreground" />
   }
 }
 

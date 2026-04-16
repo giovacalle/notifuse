@@ -73,3 +73,30 @@
 .add-node-button:hover {
   background-color: #6354d1;
 }
+
+/* Dark mode */
+.dark .react-flow__background {
+  background-color: var(--background);
+}
+
+.dark .react-flow__edge-path {
+  stroke: #555;
+}
+
+.dark .react-flow__handle {
+  border-color: var(--surface);
+}
+
+.dark .react-flow__controls-button {
+  background: var(--surface);
+  fill: var(--foreground);
+  border-bottom-color: var(--border-base);
+}
+
+.dark .react-flow__controls-button:hover {
+  background: var(--surface-secondary);
+}
+
+.dark .react-flow__controls {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}

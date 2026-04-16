@@ -89,7 +89,7 @@ export function DebugSegmentPage() {
         <Card title={t`Current Segment Tree JSON`} size="small">
           <pre
             style={{
-              background: '#f5f5f5',
+              background: 'var(--surface-secondary)',
               padding: '16px',
               borderRadius: '4px',
               overflow: 'auto',

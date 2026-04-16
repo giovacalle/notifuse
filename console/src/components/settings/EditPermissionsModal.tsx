@@ -130,7 +130,7 @@ export function EditPermissionsModal({
         columns={permissionsColumns}
         pagination={false}
         size="small"
-        className="border border-gray-200 rounded-md my-8"
+        className="border border-border-base rounded-md my-8"
       />
     </Modal>
   )

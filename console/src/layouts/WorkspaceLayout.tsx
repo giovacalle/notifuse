@@ -18,7 +18,9 @@ import {
   faAngleRight
 } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from '../contexts/AuthContext'
+import { useTheme } from '../contexts/ThemeContext'
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
+import { ThemeSwitcher } from '../components/ui/ThemeSwitcher'
 import { Workspace, UserPermissions } from '../services/api/types'
 import { ContactsCsvUploadProvider } from '../components/contacts/ContactsCsvUploadProvider'
 import { useState, useEffect } from 'react'
@@ -47,6 +49,8 @@ export function WorkspaceLayout() {
   const { t } = useLingui()
   const { workspaceId } = useParams({ from: '/console/workspace/$workspaceId' })
   const { signout, workspaces, user, refreshWorkspaces } = useAuth()
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === 'dark'
   const navigate = useNavigate()
   const [collapsed, setCollapsed] = useState(false)
   const [userPermissions, setUserPermissions] = useState<UserPermissions | null>(null)
@@ -394,11 +398,11 @@ export function WorkspaceLayout() {
 
   return (
     <ContactsCsvUploadProvider>
-      <Layout style={{ minHeight: '100vh', backgroundColor: '#F9F9F9' }}>
+      <Layout style={{ minHeight: '100vh', backgroundColor: 'var(--background)' }}>
         <Layout>
           <Sider
             width={250}
-            theme="light"
+            theme={isDark ? 'dark' : 'light'}
             style={{
               position: 'fixed',
               height: '100vh',
@@ -406,22 +410,22 @@ export function WorkspaceLayout() {
               top: 0,
               overflow: 'auto',
               zIndex: 10,
-              backgroundColor: '#F9F9F9'
+              backgroundColor: 'var(--sidebar-bg)'
             }}
             collapsible
             collapsed={collapsed}
             trigger={null}
-            className="border-r border-gray-200"
+            className="border-r border-[var(--sidebar-border)]"
           >
             <div
               style={{
                 padding: '16px 0 16px 27px',
                 textAlign: 'center',
-                borderBottom: '1px solid #f0f0f0'
+                borderBottom: '1px solid var(--border-base)'
               }}
             >
               <img
-                src={collapsed ? '/console/icon.png' : '/console/logo.png'}
+                src={collapsed ? '/console/icon.png' : (isDark ? '/console/logo-white.png' : '/console/logo.png')}
                 alt=""
                 style={{
                   height: '31px',
@@ -436,12 +440,12 @@ export function WorkspaceLayout() {
               style={{
                 height: 'calc(100% - 120px)',
                 borderRight: 0,
-                backgroundColor: '#F9F9F9',
+                backgroundColor: 'var(--sidebar-bg)',
                 fontSize: '13px',
                 fontWeight: 600
               }}
               items={loadingPermissions ? [] : menuItems}
-              theme="light"
+              theme={isDark ? 'dark' : 'light'}
             />
             <div
               style={{
@@ -450,17 +454,15 @@ export function WorkspaceLayout() {
                 left: 0,
                 width: collapsed ? '80px' : '249px',
                 padding: '16px',
-                // backgroundColor: '#F9F9F9',
                 zIndex: 1
               }}
             >
               <div
                 style={{
-                  borderBottom: '1px solid #f0f0f0',
+                  borderBottom: '1px solid var(--border-base)',
                   textAlign: 'center',
                   fontSize: '9px',
-                  color: '#000',
-                  opacity: 0.7,
+                  color: 'var(--muted-foreground)',
                   marginBottom: '8px',
                   paddingBottom: '8px'
                 }}
@@ -484,8 +486,8 @@ export function WorkspaceLayout() {
               right: 0,
               width: `calc(100% - ${collapsed ? '80px' : '250px'})`,
               height: '64px',
-              backgroundColor: '#F9F9F9',
-              borderBottom: '1px solid #f0f0f0',
+              backgroundColor: 'var(--background)',
+              borderBottom: '1px solid var(--border-base)',
               padding: '0 24px',
               display: 'flex',
               alignItems: 'center',
@@ -578,6 +580,7 @@ export function WorkspaceLayout() {
                   {t`Help`}
                 </Button>
               </Dropdown>
+              <ThemeSwitcher />
               <LanguageSwitcher />
               <Dropdown
                 menu={{
@@ -613,10 +616,10 @@ export function WorkspaceLayout() {
               marginTop: '64px',
               padding: isSettingsPage ? '0' : '24px',
               transition: 'margin-left 0.2s',
-              backgroundColor: '#F9F9F9'
+              backgroundColor: 'var(--background)'
             }}
           >
-            <Content style={{ backgroundColor: '#F9F9F9' }}>
+            <Content style={{ backgroundColor: 'var(--background)' }}>
               <FileManagerProvider
                 key={`fm-${workspaceId}-${!userPermissions?.templates?.write}`}
                 settings={workspaces.find((w) => w.id === workspaceId)?.settings.file_manager}

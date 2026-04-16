@@ -7,12 +7,17 @@
 .notifuse-editor.ProseMirror {
   /* Blockquote - only bar color is customizable via separator */
   --blockquote-bg-color: #f5f5f5;
-  
+
   /* Code - border and syntax highlighting colors are not customizable */
   --notifuse-editor-inline-code-border-color: rgba(0, 0, 0, 0.1);
   --notifuse-editor-codeblock-bg: #1e1e1e;
   --notifuse-editor-codeblock-text: #d4d4d4;
   --notifuse-editor-codeblock-border: #3e3e42;
+}
+
+.dark .notifuse-editor.ProseMirror {
+  --blockquote-bg-color: #1f1f1f;
+  --notifuse-editor-inline-code-border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* =====================

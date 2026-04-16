@@ -28,4 +28,13 @@
 /* Remove default Ant Design menu borders */
 .suggestion-menu-core.ant-menu {
   border: none;
-  }
+}
+
+/* Dark mode */
+.dark .suggestion-menu-core {
+  background: var(--surface);
+}
+
+.dark .suggestion-menu-core .ant-menu-item-group-title {
+  color: var(--muted);
+}

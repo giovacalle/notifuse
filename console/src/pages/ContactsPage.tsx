@@ -372,10 +372,10 @@ export function ContactsPage() {
       key: 'email',
       fixed: 'left' as const,
       onHeaderCell: () => ({
-        style: { backgroundColor: '#F9F9F9' }
+        style: { backgroundColor: 'var(--background)' }
       }),
       onCell: () => ({
-        style: { backgroundColor: '#F9F9F9' }
+        style: { backgroundColor: 'var(--background)' }
       })
     },
     {
@@ -768,10 +768,10 @@ export function ContactsPage() {
       fixed: 'right' as const,
       align: 'right' as const,
       onHeaderCell: () => ({
-        style: { backgroundColor: '#F9F9F9' }
+        style: { backgroundColor: 'var(--background)' }
       }),
       onCell: () => ({
-        style: { backgroundColor: '#F9F9F9' }
+        style: { backgroundColor: 'var(--background)' }
       }),
       render: (_: unknown, record: Contact) => {
         const menuItems: MenuProps['items'] = [
@@ -956,7 +956,7 @@ export function ContactsPage() {
             ? t`No contacts found. Add some contacts to get started.`
             : t`Loading...`
         }}
-        className="border border-gray-200 rounded-md"
+        className="border border-border-base rounded-md"
       />
 
       {data?.next_cursor && (

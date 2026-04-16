@@ -401,7 +401,7 @@ export default function SendTemplateModal({
                       return (
                         <div
                           key={index}
-                          className="flex items-center justify-between p-2 border border-gray-200 rounded"
+                          className="flex items-center justify-between p-2 border border-border-base rounded"
                         >
                           <Space>
                             <Text>{att.filename}</Text>

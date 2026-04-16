@@ -384,7 +384,7 @@ export function ThemeEditorDrawer({
               <PanelResizeHandle
                 style={{
                   width: 1,
-                  background: '#e0e0e0',
+                  background: 'var(--border-secondary)',
                   cursor: 'col-resize',
                   position: 'relative'
                 }}

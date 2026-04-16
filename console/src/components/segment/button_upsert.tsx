@@ -643,7 +643,7 @@ const DrawerSegment = (props: {
                                   </p>
                                   <pre
                                     style={{
-                                      backgroundColor: '#f5f5f5',
+                                      backgroundColor: 'var(--surface-secondary)',
                                       padding: '8px',
                                       borderRadius: '4px',
                                       fontSize: '11px',
@@ -662,7 +662,7 @@ const DrawerSegment = (props: {
                                   </p>
                                   <pre
                                     style={{
-                                      backgroundColor: '#f5f5f5',
+                                      backgroundColor: 'var(--surface-secondary)',
                                       padding: '8px',
                                       borderRadius: '4px',
                                       fontSize: '11px',

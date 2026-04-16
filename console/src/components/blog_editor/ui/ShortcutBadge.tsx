@@ -37,6 +37,6 @@ export function ShortcutBadge({ shortcutKeys }: ShortcutBadgeProps) {
   // Join keys with space for display (e.g., ["⌘", "D"] -> "⌘ D")
   const displayText = formattedKeys.join(' ')
   
-  return <Badge count={displayText} style={{ backgroundColor: '#f0f0f0', color: '#666' }} />
+  return <Badge count={displayText} style={{ backgroundColor: 'var(--surface-secondary)', color: 'var(--muted-foreground)' }} />
 }
 

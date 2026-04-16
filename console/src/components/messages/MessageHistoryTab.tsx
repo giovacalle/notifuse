@@ -577,13 +577,13 @@ export const MessageHistoryTab: React.FC<MessageHistoryTabProps> = ({ workspaceI
       <div className="flex flex-col gap-2">
         {/* First line: Status filters */}
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-gray-600">{t`Status`}:</span>
+          <span className="text-sm font-medium text-muted-foreground">{t`Status`}:</span>
           <Space wrap>{renderFilterGroup(statusFilterOptions)}</Space>
         </div>
 
         {/* Second line: Other filters */}
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-gray-600">{t`Filters`}:</span>
+          <span className="text-sm font-medium text-muted-foreground">{t`Filters`}:</span>
           <Space wrap>
             {renderFilterGroup(otherFilterOptions)}
             {activeFilters.length > 0 && (

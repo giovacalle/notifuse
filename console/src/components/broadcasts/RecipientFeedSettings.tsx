@@ -106,7 +106,7 @@ export function RecipientFeedSettings({
               <Space size={4}>
                 <span>{t`Per-recipient feed URL`}</span>
                 <Tooltip title={t`The URL must use HTTPS. A POST request will be sent with contact information for each recipient.`}>
-                  <QuestionCircleOutlined className="text-gray-400 cursor-help" />
+                  <QuestionCircleOutlined className="text-muted cursor-help" />
                 </Tooltip>
               </Space>
             }
@@ -203,7 +203,7 @@ export function RecipientFeedSettings({
                           className={`${className} p-3 m-0 text-xs leading-relaxed overflow-auto rounded`}
                           style={{
                             ...style,
-                            backgroundColor: '#f6f8fa',
+                            backgroundColor: 'var(--surface-secondary)',
                             fontFamily: 'Monaco, Menlo, "Ubuntu Mono", monospace',
                             maxHeight: 400
                           }}

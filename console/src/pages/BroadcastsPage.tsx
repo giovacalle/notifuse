@@ -358,13 +358,13 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
     return (
       <div className="max-w-xs">
         <div className="mb-2">
-          <div className="font-medium text-gray-500">{t`Status`}</div>
+          <div className="font-medium text-muted-foreground">{t`Status`}</div>
           <div>{getTaskStatusBadge(task.status)}</div>
         </div>
 
         {task.next_run_after && task.status !== 'completed' && (
           <div className="mb-2">
-            <div className="font-medium text-gray-500">{t`Next Run`}</div>
+            <div className="font-medium text-muted-foreground">{t`Next Run`}</div>
             <div className="text-sm">
               {task.status === 'paused' ? (
                 <Tooltip title={dayjs(task.next_run_after).format('lll')}>
@@ -385,7 +385,7 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
 
         {(task.progress > 0 || task.state?.send_broadcast) && (
           <div className="mb-2">
-            <div className="font-medium text-gray-500">{t`Progress`}</div>
+            <div className="font-medium text-muted-foreground">{t`Progress`}</div>
             <Progress
               percent={Math.round(
                 task.state?.send_broadcast
@@ -401,26 +401,26 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
 
         {task.state?.message && (
           <div className="mb-2">
-            <div className="font-medium text-gray-500">{t`Message`}</div>
+            <div className="font-medium text-muted-foreground">{t`Message`}</div>
             <div>{task.state.message}</div>
           </div>
         )}
 
         {task.state?.send_broadcast && task.state.send_broadcast.failed_count > 0 && (
           <div className="mb-2">
-            <div className="font-medium text-gray-500">{t`Failed`}</div>
+            <div className="font-medium text-muted-foreground">{t`Failed`}</div>
             <div className="text-sm text-red-500">{task.state.send_broadcast.failed_count}</div>
           </div>
         )}
 
         {task.error_message && (
           <div className="mb-2">
-            <div className="font-medium text-gray-500">{t`Error`}</div>
+            <div className="font-medium text-muted-foreground">{t`Error`}</div>
             <div className="text-red-500 text-sm">{task.error_message}</div>
           </div>
         )}
 
-        {task.type && <div className="text-xs text-gray-500 mt-2">{t`Task type:`} {task.type}</div>}
+        {task.type && <div className="text-xs text-muted-foreground mt-2">{t`Task type:`} {task.type}</div>}
       </div>
     )
   }
@@ -453,7 +453,7 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
                 </span>
               </Popover>
             ) : isTaskLoading ? (
-              <span className="text-gray-400">
+              <span className="text-muted-foreground">
                 {getStatusBadge(broadcast, remainingTestTime, progressStats, t)}
                 <FontAwesomeIcon icon={faSpinner} spin className="ml-2" />
               </span>
@@ -629,7 +629,7 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
         />
       </div>
 
-      <div className={`bg-gradient-to-br from-gray-50 to-violet-50 border-t border-gray-200`}>
+      <div className={`bg-gradient-to-br from-gray-50 dark:from-[#191919] to-violet-50 dark:to-[#1e1a2e] border-t border-border-base`}>
         <div className="text-center py-2">
           <Button type="link" onClick={() => setShowDetails(!showDetails)}>
             {showDetails ? (
@@ -712,7 +712,7 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
                       <div>
                         <div>{subject}</div>
                         {record.subjectPreview && (
-                          <div className="text-xs text-gray-500">{record.subjectPreview}</div>
+                          <div className="text-xs text-muted-foreground">{record.subjectPreview}</div>
                         )}
                       </div>
                     )
@@ -723,11 +723,11 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
                     render: (record) => (
                       <div>
                         <div>
-                          <span className="font-medium text-gray-500">{t`From:`}</span> {record.sender}
+                          <span className="font-medium text-muted-foreground">{t`From:`}</span> {record.sender}
                         </div>
                         {record.replyTo && record.replyTo !== '-' && (
                           <div>
-                            <span className="font-medium text-gray-500">{t`Reply To:`}</span>{' '}
+                            <span className="font-medium text-muted-foreground">{t`Reply To:`}</span>{' '}
                             {record.replyTo}
                           </div>
                         )}
@@ -894,7 +894,7 @@ const BroadcastCard: React.FC<BroadcastCardProps> = ({
                 size="small"
                 pagination={false}
                 scroll={{ x: 'max-content' }}
-                rowClassName={(record) => (record.isWinner ? 'bg-green-50' : '')}
+                rowClassName={(record) => (record.isWinner ? 'bg-green-50 dark:bg-green-950' : '')}
               />
             </div>
 

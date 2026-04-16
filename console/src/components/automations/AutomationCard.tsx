@@ -253,7 +253,7 @@ export const AutomationCard: React.FC<AutomationCardProps> = ({
     >
       {/* Stats Row */}
       {automation.stats && (
-        <div className="px-6 py-4 border-b border-gray-100">
+        <div className="px-6 py-4 border-b border-border-base">
           <Row gutter={24}>
             <Col span={6}>
               <Statistic
@@ -288,7 +288,7 @@ export const AutomationCard: React.FC<AutomationCardProps> = ({
       )}
 
       {/* Details */}
-      <div className="px-6 py-4 border-b border-gray-100">
+      <div className="px-6 py-4 border-b border-border-base">
         <Descriptions size="small" column={2}>
           <Descriptions.Item label={t`ID`}>{automation.id}</Descriptions.Item>
           <Descriptions.Item label={t`Trigger`}>

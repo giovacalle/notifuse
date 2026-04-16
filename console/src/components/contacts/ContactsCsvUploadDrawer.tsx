@@ -903,7 +903,7 @@ export function ContactsCsvUploadDrawer({
                         style={{
                           border: '1px solid #f0f0f0',
                           padding: '8px',
-                          background: '#fafafa',
+                          background: 'var(--surface-secondary)',
                           textAlign: 'left'
                         }}
                       >
@@ -913,7 +913,7 @@ export function ContactsCsvUploadDrawer({
                         style={{
                           border: '1px solid #f0f0f0',
                           padding: '8px',
-                          background: '#fafafa',
+                          background: 'var(--surface-secondary)',
                           textAlign: 'left'
                         }}
                       >
@@ -923,7 +923,7 @@ export function ContactsCsvUploadDrawer({
                         style={{
                           border: '1px solid #f0f0f0',
                           padding: '8px',
-                          background: '#fafafa',
+                          background: 'var(--surface-secondary)',
                           textAlign: 'left'
                         }}
                       >
@@ -978,7 +978,7 @@ export function ContactsCsvUploadDrawer({
           {lists && lists.length > 0 && (
             <div
               style={{
-                background: '#f8f8f8',
+                background: 'var(--surface-secondary)',
                 padding: '16px',
                 borderRadius: '4px',
                 marginBottom: '24px'
@@ -1031,7 +1031,7 @@ export function ContactsCsvUploadDrawer({
 
           <div
             style={{
-              background: '#f8f8f8',
+              background: 'var(--surface-secondary)',
               padding: '16px',
               borderRadius: '4px',
               marginBottom: '12px'
@@ -1151,7 +1151,7 @@ export function ContactsCsvUploadDrawer({
                       <div
                         style={{
                           minWidth: '300px',
-                          background: 'white',
+                          background: 'var(--surface)',
                           border: '1px solid #f0f0f0',
                           borderRadius: '4px',
                           padding: '4px 8px'
